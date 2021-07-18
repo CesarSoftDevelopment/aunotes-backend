@@ -1,0 +1,30 @@
+
+    <%- include('includes/head') %>
+    <%- include('includes/header') %>
+    
+    <div>
+      <div class="text-center">
+        <img style="margin-top: 100px" class="photo" src="/frontend/assets/img/autonotes.png" alt="" width="300" height="300">
+        <%- include('includes/messages') %>
+      </div>
+      
+      <form style="padding-bottom: 200px;" action="/login/entrada" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div style="padding-left: 500px; padding-top: 100px;">
+            <h2 style="color: black; padding-bottom: 20px; padding-left: 70px;">Entre</h1>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input id="email" style="width: 300px;" type="email" class="form-control" name="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Senha</label>
+          <input id="senha" style="width: 300px;"  type="password" class="form-control" name="senha">
+        </div>
+       
+        <button id="btn-login" type="submit" class="btn btn-danger">Entrar</button>
+      </form>
+    </div>
+
+    <div class="card"></div>
+    <%- include('includes/footer') %>
+   
